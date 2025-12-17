@@ -1,0 +1,6 @@
+yarn add typescript ts-node -g
+
+yarn remove typescript ts-node 
+
+yarn remove typescript ts-node && yarn add typescript ts-node -D
+معناها ان الكومند التاني مش هيتفذ غير لما الاولاني يخلص ويتنفذ تماما 
