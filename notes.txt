@@ -4,3 +4,17 @@ yarn remove typescript ts-node
 
 yarn remove typescript ts-node && yarn add typescript ts-node -D
 معناها ان الكومند التاني مش هيتفذ غير لما الاولاني يخلص ويتنفذ تماما 
+
+ts-node index.ts
+ده بينفذ اللي جو الملف ده 
+
+tsc index.ts
+ده بيعمل كومبيلنج للفايل ده 
+
+
+فيه حاجه اسمها watch mode 
+بستخدمه عشان معملش كل مره اعمل فيها تغيير Compile من اول جديد
+tsc index.ts -w
+
+tsc --init 
+ده بيعمل الفايل المسئول عن اعدادات Ts عندي tsconfig.json
