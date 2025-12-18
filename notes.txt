@@ -200,3 +200,45 @@ console.log(sumNumbers("str",1, 2, 3));
 
 ===================
 Enums
+
+// <— allows you to define a set of : named numeric constants or string values.
+
+enum Direction {
+    // ** Up, Right, Bottom, Left
+    Up,
+    Right,
+    Bottom,
+    Left,
+}
+
+const playerDirection = Direction.Right;
+
+console.Log(playerDirection); // 1 , index
+
+
+الطربقة التانيه :
+بندي قيم فعليه جو enum
+enum StatusCode {
+  Success = 200,
+  NotFound = 404,
+  ServerError = 500,
+}
+
+function handleResponse(status: StatusCode) {
+  switch (status) {
+    case StatusCode.Success:
+      console.log("Success: The request was successful.");
+      break;
+
+    case StatusCode.NotFound:
+      console.log("Not Found: The request was not found.");
+      break;
+
+    case StatusCode.ServerError:
+      console.log("Server Error: The request errored on the server.");
+      break;
+    default:
+       console.log("UnKnown status code : Unable to handle the response");
+  }
+}
+handleResponse(StatusCode.Success);
