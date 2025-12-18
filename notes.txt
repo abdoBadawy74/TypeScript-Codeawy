@@ -58,3 +58,73 @@ const list: [number, string, { username: string }, boolean] = [1, "Hello", { use
 function logMessage(message : string) : void {
     clg(message);
 }
+=======================================
+interface IUser {
+  username: string;
+  age: number;
+  isMarried: boolean;
+  address?: string;  // optional can be found in object and can not
+}
+
+const userProfile: IUser = {
+  username: "codeaway",
+  age: 30,
+  isMarried: false,
+};
+
+const newUser: IUser = {
+  userProfile,
+  address: "10 main street",
+};
+
+طيب لو عاوز اعمل انترفيس جديد ؟ 
+
+interface IUser {
+  username: string;
+  age: number;
+  isMarried: boolean;
+}
+
+interface INewUser {
+  username: string;
+  age: number;
+  isMarried: boolean;
+  address: string;  
+}
+
+const userProfile: IUser = {
+  username: "codeaway",
+  age: 30,
+  isMarried: false,
+};
+
+const newUser: INewUser = {
+  userProfile,
+  address: "10 main street",
+};
+
+هيجي هنا دور Extends interface
+
+interface IUser {
+  username: string;
+  age: number;
+  isMarried: boolean;
+}
+
+interface INewUser extends IUser {
+  address: string;  
+  imageUrl?: string;
+}
+
+const userProfile: IUser = {
+  username: "codeaway",
+  age: 30,
+  isMarried: false,
+};
+
+const newUser: INewUser = {
+  userProfile,
+  address: "10 main street",
+  imageUrl:"https://...."
+};
+
