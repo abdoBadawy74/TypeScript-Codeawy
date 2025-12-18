@@ -36,3 +36,25 @@ null vs. undefined
 null=>> دي بتشير ان المتغير ده لازم تكون قيمته تكون فاضيه في الوقت ده
 undefined => دي قيمة اي متغير اتعرف بس لسه مخدش قيمة
 ونوعه بيكون any 
+
+============================
+object - array - tuple - void
+
+//object
+const userProfile = { username: string; age: number; isMarried: boolean; hobbies: string[] } = {
+  username: "Codeawy",
+  age: 30,
+  isMarried: false,
+  hobbies: ["Drawing", "Cooking"],
+};
+
+//array
+const numbers: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+//tuple
+const list: [number, string, { username: string }, boolean] = [1, "Hello", { username: "Codeawy" }, true];
+
+//void
+function logMessage(message : string) : void {
+    clg(message);
+}
