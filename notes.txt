@@ -301,3 +301,20 @@ const user: IUser = {
 console.log(updateUser(user, {})); // { username: 'codeaway', address: '10 main street', age: 30 }
 
 console.log(updateUser(user, { username: "naga", age: 25 }));// { username: 'naga', address: '10 main street', age: 25 }
+
+================================================
+index signature
+
+بتخليك تعرف انترفيس عام كده بدل م تكتب كل القيم بايدك 
+
+interface IDictionary {
+  [key: string]: string;
+}
+
+const cityDictionary: IDictionary = {
+  cairo: "Egypt",
+  paris: "France",
+};
+
+console.log(cityDictionary["cairo"]); // Egypt
+console.log(cityDictionary['fasdfdas']); // undefined
