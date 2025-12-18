@@ -242,3 +242,39 @@ function handleResponse(status: StatusCode) {
   }
 }
 handleResponse(StatusCode.Success);
+
+======================================
+Generics 
+دي بتسمحلك تكتب داله او كلاس تقدر تشتغل مع نوع بيانات 
+
+<T>
+تعتبر كده زي نوع بيانات عام يقدر يستقبل اي حاجه 
+
+function logArg<T>(arg: T) {
+  return arg;
+}
+
+console.log(logArg(1, 2, 3, 4));
+console.log(logArg("hello"));
+console.log(logArg([1,2,3]));
+console.log(logArg({name:"ali"}));
+
+ex2:
+
+function swap<T>(a1: T, a2: T) {
+  return [a2, a1];
+}
+
+let num1 = 10;
+let num2 = 20;
+
+console.log(`Before swap: num1 = ${num1}, num2 = ${num2}`); // Before swap: num1 = 10, num2 = 20
+[num1, num2] = swap(num1, num2);
+console.log(`After swap: num1 = ${num1}, num2 = ${num2}`); // After swap: num1 = 20, num2 = 10
+
+let str1 = "Str1";
+let str2 = "Str2";
+
+console.log(`Before swap: srt1 = ${str1}, str2 = ${str2}`); // Before swap: str1 = Str1, str2 = Str2
+[str1, str2] = swap(str1, str2);
+console.log(`After swap: srt1 = ${str1}, str2 = ${str2}`); // After swap: str1 = Str2, str2 = Str1
