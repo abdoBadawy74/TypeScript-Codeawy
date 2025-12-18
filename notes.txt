@@ -278,3 +278,26 @@ let str2 = "Str2";
 console.log(`Before swap: srt1 = ${str1}, str2 = ${str2}`); // Before swap: str1 = Str1, str2 = Str2
 [str1, str2] = swap(str1, str2);
 console.log(`After swap: srt1 = ${str1}, str2 = ${str2}`); // After swap: str1 = Str2, str2 = Str1
+
+=====================================================
+Partial
+
+interface IUser {
+  username: string;
+  address: string;
+  age: number;
+}
+
+function updateUser(user: IUser, updates: Partial<IUser>) {
+  return { ...user, ...updates };
+}
+
+const user: IUser = {
+  username: "codeaway",
+  address: "10 main street",
+  age: 30
+}
+
+console.log(updateUser(user, {})); // { username: 'codeaway', address: '10 main street', age: 30 }
+
+console.log(updateUser(user, { username: "naga", age: 25 }));// { username: 'naga', address: '10 main street', age: 25 }
