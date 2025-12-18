@@ -128,3 +128,37 @@ const newUser: INewUser = {
   imageUrl:"https://...."
 };
 
+======================================
+type
+
+بستخدمه مع alias 
+اللي هي زي pi, serial number
+type PI = number;
+بستخدمها مع union بردو 
+type Status = "online" || "offline;
+
+===============================
+
+readonly 
+
+interface IUser {
+  username: string;
+  readonly age: number;  // دي هتخلي ان التعديل ع الايدج غير مسمحوح بيه 
+  isMarried: boolean;
+}
+
+const userProfile: IUser = {
+  username: "codeaway",
+  age: 30,
+  isMarried: false,
+};
+=======================
+لو عندي اوبجكت وعاوز اضيف عليه key جديد 
+هتتعمل ازاي ؟
+const person : Record<string,string> ={ 
+    username:"abdo",
+}
+person[address]="10 main street"
+
+الريكورد دي بتقول للتايب سكريبن اني هضيف متغير تاني ع الاوبجكت اللي عندي بس بحدد نوع المفتاح ونوع القيمة
+=======================================
