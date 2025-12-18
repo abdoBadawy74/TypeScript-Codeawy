@@ -185,3 +185,18 @@ function getProperty(obj: IUser, key: UserKeys) {
 console.log(getProperty(user, "username"));
 console.log(getProperty(user, "age"));
 console.log(getProperty(user, "address"));
+
+======================================
+rest parameters 
+
+function sumNumbers(text: string, ...numbers: number[]) {
+  return numbers.reduce((sum, num) => sum + num, 0);
+}
+
+console.log(sumNumbers("str",1, 2, 3));
+لازم تكون اخر حاجه في الباراميترز 
+لو حطيت [] وانت بتبعت args
+يبقى تشيل الاسبريد ...
+
+===================
+Enums
