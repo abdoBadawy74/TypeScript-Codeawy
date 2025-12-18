@@ -162,3 +162,26 @@ person[address]="10 main street"
 
 الريكورد دي بتقول للتايب سكريبن اني هضيف متغير تاني ع الاوبجكت اللي عندي بس بحدد نوع المفتاح ونوع القيمة
 =======================================
+
+**keyof**
+interface IUser {
+  username: string;
+  age: number;
+  address: string;
+}
+
+type UserKeys = keyof IUser; // * username | age | address
+
+const user: IUser = {
+  username: "codeeav",
+  age: 30,
+  address: "10 main street",
+};
+
+function getProperty(obj: IUser, key: UserKeys) {
+  return obj[key];
+}
+
+console.log(getProperty(user, "username"));
+console.log(getProperty(user, "age"));
+console.log(getProperty(user, "address"));
